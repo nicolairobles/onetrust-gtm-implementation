@@ -1,0 +1,467 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2018-08-01 17:11:08",
+  "containerVersion": {
+    "path": "accounts/3643364031/containers/9444777/versions/0",
+    "accountId": "3643364031",
+    "containerId": "9444777",
+    "containerVersionId": "0",
+    "container": {
+      "path": "accounts/3643364031/containers/9444777",
+      "accountId": "3643364031",
+      "containerId": "9444777",
+      "name": "Container with blocking",
+      "publicId": "GTM-W5LTZDW",
+      "usageContext": [
+        "WEB"
+      ],
+      "fingerprint": "1533143016524",
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/3643364031/containers/9444777/workspaces?apiLink=container"
+    },
+    "tag": [
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "tagId": "1",
+        "name": "Cookie Banner Script",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<!-- place your Cookie script below this line -->\n\n\n<script type=\"text/javascript\">\n\nfunction OptanonWrapper() { window.dataLayer.push( { event: 'OneTrustGroupsUpdated' } ) }\n\n</script>\n\n"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "true"
+          }
+        ],
+        "fingerprint": "1533143450974",
+        "firingTriggerId": [
+          "2147479553"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT"
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "triggerId": "5",
+        "name": "Activate - Functional Cookies",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "OneTrustGroupsUpdated"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{OnetrustActiveGroups}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ",C0003,"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1533141558168"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "triggerId": "6",
+        "name": "Activate - Performance Cookies",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "OneTrustGroupsUpdated"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{OnetrustActiveGroups}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ",C0002,"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1533141565561"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "triggerId": "7",
+        "name": "Activate - Social Media Cookies",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "OneTrustGroupsUpdated"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{OnetrustActiveGroups}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ",C0005,"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1533141576550"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "triggerId": "8",
+        "name": "Activate - Targeting Cookies",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "OneTrustGroupsUpdated"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{OnetrustActiveGroups}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ",C0004,"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1533141588364"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "triggerId": "10",
+        "name": "Block - Functional Cookies",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ".*"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{OnetrustActiveGroups}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ",C0003,"
+              },
+              {
+                "type": "BOOLEAN",
+                "key": "negate",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1533141529020"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "triggerId": "11",
+        "name": "Block - Performance Cookies",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ".*"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{OnetrustActiveGroups}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ",C0002,"
+              },
+              {
+                "type": "BOOLEAN",
+                "key": "negate",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1533141534430"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "triggerId": "12",
+        "name": "Block - Social Media Cookies",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ".*"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{OnetrustActiveGroups}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ",C0005,"
+              },
+              {
+                "type": "BOOLEAN",
+                "key": "negate",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1533141539112"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "triggerId": "13",
+        "name": "Block - Targeting Cookies",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ".*"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{OnetrustActiveGroups}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ",C0004,"
+              },
+              {
+                "type": "BOOLEAN",
+                "key": "negate",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1533142182714"
+      }
+    ],
+    "variable": [
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "variableId": "1",
+        "name": "OnetrustActiveGroups",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "OnetrustActiveGroups"
+          }
+        ],
+        "fingerprint": "1531490327668"
+      }
+    ],
+    "builtInVariable": [
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "type": "PAGE_URL",
+        "name": "Page URL"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "type": "PAGE_HOSTNAME",
+        "name": "Page Hostname"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "type": "PAGE_PATH",
+        "name": "Page Path"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "type": "REFERRER",
+        "name": "Referrer"
+      },
+      {
+        "accountId": "3643364031",
+        "containerId": "9444777",
+        "type": "EVENT",
+        "name": "Event"
+      }
+    ],
+    "fingerprint": "0",
+    "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/3643364031/containers/9444777/versions/0?apiLink=version"
+  }
+}
